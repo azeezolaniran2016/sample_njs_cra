@@ -1,0 +1,25 @@
+{
+  "name": "sample_njs",
+  "version": "1.0.0",
+  "description": "A simple nodejs web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "build:client": "cd client && npm ci && npm run build",
+    "start:prod": "npm run build:client && npm ci && node ./index.js",
+    "start:dev": "nodemon --watch server --watch index.js ./index.js & cd ./client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/azeezolaniran2016/sample_njs"
+  },
+  "author": "Azeez Olaniran",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

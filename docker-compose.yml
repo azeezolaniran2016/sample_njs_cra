@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+    sample_njs:
+        build: 
+            context: .
+        ports: 
+            - 3030:3030
+            - 3000:3000
+        command: "npm run start:dev"
+        volumes:
+            - .:/app
+        stdin_open: true # https://stackoverflow.com/questions/60895246/react-app-exiting-in-docker-container-with-exit-code-0
